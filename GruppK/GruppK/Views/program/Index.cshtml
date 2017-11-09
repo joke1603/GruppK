@@ -9,7 +9,8 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.name)
@@ -33,7 +34,20 @@
             @Html.DisplayNameFor(model => model.channel.name)
         </th>
         <th></th>
-    </tr>
+    </tr>*@
+
+<ul>
+    <h1>SVT1</h1>
+    @foreach (var item in Model)
+            {
+                if (@item.channel.name == "SVT1")
+                {
+            <li>@item.name - @item.description</li>
+        }
+    }
+</ul>
+
+
 
 @foreach (var item in Model) {
     <tr>
